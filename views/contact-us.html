@@ -154,7 +154,7 @@
     // Map Markers
     var mapMarkers = [{
         address: "{{ consts.address_str }}",
-        html: "{{ consts.address_html }}",
+        html: "{{ consts.address_html | safe }}",
         icon: {
             image: "img/pin.png",
             iconsize: [26, 46],
