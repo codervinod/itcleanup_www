@@ -4,51 +4,43 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var nunjucks = require('nunjucks');
 
 var app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+nunjucks.configure('views', {
+    autoescape: true,
+    express: app
+});
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+app.get('/', function(req, res) {
+    res.render('index.html');
 });
 
-// error handlers
-
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
-  });
-}
-
-// production error handler
-// no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {}
-  });
+app.get('/about-us', function(req, res) {
+    res.render('about-us.html');
 });
 
+app.get('/contact-us', function(req, res) {
+    res.render('contact-us.html');
+});
+
+app.get('/page-404', function(req, res) {
+    res.render('page-404.html');
+});
+
+app.get('/page-faq', function(req, res) {
+    res.render('page-faq.html');
+});
+
+app.get('/sitemap', function(req, res) {
+    res.render('sitemap.html');
+});
 
 module.exports = app;
