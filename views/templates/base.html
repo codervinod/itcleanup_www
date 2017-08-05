@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    {% include "templates/header.html" %}
+
+</head>
+<body>
+
+<div class="body">
+    {% include "templates/menu.html" %}
+    {% block main_body %}
+            Default body
+    {% endblock %}
+    {% include "templates/footer.html" %}
+</div>
+
+{% include "templates/footer_incs.html" %}
+{% block current_page_script %}
+
+{% endblock %}
+
+</body>
+</html>

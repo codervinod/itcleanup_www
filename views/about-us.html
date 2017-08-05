@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
+{% extends "templates/base.html" %}
 
-    {% include "templates/header.html" %}
-
-
-</head>
-<body>
-
-<div class="body">
-    {% include "templates/menu.html" %}
-
+{% block main_body %}
     <div role="main" class="main">
 
         <section class="page-header">
@@ -228,12 +218,5 @@
         </div>
 
     </div>
+{% endblock %}
 
-    {% include "templates/footer.html" %}
-</div>
-
-{% include "templates/footer_incs.html" %}
-
-
-</body>
-</html>

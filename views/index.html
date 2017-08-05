@@ -1,289 +1,278 @@
-<!DOCTYPE html>
-<html>
-<head>
+{% extends "templates/base.html" %}
 
-    {% include "templates/header.html" %}
+{% block main_body %}
+<div role="main" class="main">
 
-</head>
-<body>
+    <div class="slider-with-overlay">
 
-<div class="body">
-    {% include "templates/menu.html" %}
+        <div class="slider-container rev_slider_wrapper" style="height: 560px;">
+            <div id="revolutionSlider" class="slider rev_slider" data-plugin-revolution-slider
+                 data-plugin-options="{'delay': 9000, 'gridwidth': 1170, 'gridheight': 560}">
+                <ul>
+                    <li data-transition="fade">
+                        <img src="img/slides/laptop-pile-slide.jpg"
+                             alt=""
+                             data-bgposition="center center"
+                             data-bgfit="cover"
+                             data-bgrepeat="no-repeat"
+                             class="rev-slidebg">
 
-    <div role="main" class="main">
+                        <div class="tp-caption"
+                             data-x="177"
+                             data-y="180"
+                             data-start="1000"
+                             data-transform_in="x:[-300%];opacity:0;s:500;"><img
+                                src="img/slides/slide-title-border.png" alt=""></div>
 
-        <div class="slider-with-overlay">
-
-            <div class="slider-container rev_slider_wrapper" style="height: 560px;">
-                <div id="revolutionSlider" class="slider rev_slider" data-plugin-revolution-slider
-                     data-plugin-options="{'delay': 9000, 'gridwidth': 1170, 'gridheight': 560}">
-                    <ul>
-                        <li data-transition="fade">
-                            <img src="img/slides/laptop-pile-slide.jpg"
-                                 alt=""
-                                 data-bgposition="center center"
-                                 data-bgfit="cover"
-                                 data-bgrepeat="no-repeat"
-                                 class="rev-slidebg">
-
-                            <div class="tp-caption"
-                                 data-x="177"
-                                 data-y="180"
-                                 data-start="1000"
-                                 data-transform_in="x:[-300%];opacity:0;s:500;"><img
-                                    src="img/slides/slide-title-border.png" alt=""></div>
-
-                            <div class="tp-caption top-label"
-                                 data-x="227"
-                                 data-y="180"
-                                 data-start="500"
-                                 data-transform_in="y:[-300%];opacity:0;s:500;">Do you want a partner you can trust?
-                            </div>
-
-                            <div class="tp-caption"
-                                 data-x="480"
-                                 data-y="180"
-                                 data-start="1000"
-                                 data-transform_in="x:[300%];opacity:0;s:500;"><img
-                                    src="img/slides/slide-title-border.png" alt=""></div>
-
-                            <div class="tp-caption main-label"
-                                 data-x="135"
-                                 data-y="210"
-                                 data-start="1500"
-                                 data-whitespace="nowrap"
-                                 data-transform_in="y:[100%];s:500;"
-                                 data-transform_out="opacity:0;s:500;"
-                                 data-mask_in="x:0px;y:0px;">IT Cleanup
-                            </div>
-
-                            <div class="tp-caption bottom-label"
-                                 data-x="185"
-                                 data-y="280"
-                                 data-start="2000"
-                                 data-transform_in="y:[100%];opacity:0;s:500;">Talk to us today. We don't resell your
-                                stuff locally.
-                            </div>
-
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="home-intro" id="home-intro">
-                <div class="container">
-
-                    <div class="row">
-                        <div class="col-md-8">
-                            <p>
-                                The fastest way to grow your business with market leading operations across Asia
-                                <span>Talk to us today.</span>
-                            </p>
+                        <div class="tp-caption top-label"
+                             data-x="227"
+                             data-y="180"
+                             data-start="500"
+                             data-transform_in="y:[-300%];opacity:0;s:500;">Do you want a partner you can trust?
                         </div>
-                        <div class="col-md-4">
-                            <div class="get-started">
-                                <a href="#" class="btn btn-lg btn-primary">Get Started Now!</a>
-                                <div class="learn-more">or <a href="/">learn more.</a></div>
-                            </div>
+
+                        <div class="tp-caption"
+                             data-x="480"
+                             data-y="180"
+                             data-start="1000"
+                             data-transform_in="x:[300%];opacity:0;s:500;"><img
+                                src="img/slides/slide-title-border.png" alt=""></div>
+
+                        <div class="tp-caption main-label"
+                             data-x="135"
+                             data-y="210"
+                             data-start="1500"
+                             data-whitespace="nowrap"
+                             data-transform_in="y:[100%];s:500;"
+                             data-transform_out="opacity:0;s:500;"
+                             data-mask_in="x:0px;y:0px;">IT Cleanup
                         </div>
-                    </div>
 
-                </div>
-            </div>
-
-            <div class="slider-contact-form">
-                <div class="container">
-
-                    <div class="row">
-                        <div class="col-md-5 col-md-offset-7">
-
-                            <div class="featured-boxes mt-none mb-none">
-                                <div class="featured-box featured-box-primary mt-xl">
-                                    <div class="box-content">
-                                        <h4 class="mb-none">Contact Us</h4>
-                                        <p>Contact us or give us a call to discover how we can help.</p>
-                                        <form id="contactForm" action="php/contact-form.php" method="POST">
-                                            <div class="row">
-                                                <div class="form-group">
-                                                    <div class="col-md-6">
-                                                        <label>Your name *</label>
-                                                        <input type="text" value=""
-                                                               data-msg-required="Please enter your name."
-                                                               maxlength="100" class="form-control" name="name"
-                                                               id="name" required>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <label>Your email address *</label>
-                                                        <input type="email" value=""
-                                                               data-msg-required="Please enter your email address."
-                                                               data-msg-email="Please enter a valid email address."
-                                                               maxlength="100" class="form-control" name="email"
-                                                               id="email" required>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="form-group">
-                                                    <div class="col-md-12">
-                                                        <label>Subject</label>
-                                                        <input type="text" value=""
-                                                               data-msg-required="Please enter the subject."
-                                                               maxlength="100" class="form-control" name="subject"
-                                                               id="subject" required>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="form-group">
-                                                    <div class="col-md-12">
-                                                        <label>Message *</label>
-                                                        <textarea maxlength="5000"
-                                                                  data-msg-required="Please enter your message."
-                                                                  rows="3" class="form-control" name="message"
-                                                                  id="message" required></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-4">
-                                                    <input type="submit" value="Send Message"
-                                                           class="btn btn-primary mb-xl" data-loading-text="Loading...">
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <div class="alert alert-success hidden" id="contactSuccess">
-                                                        Message has been sent to us.
-                                                    </div>
-
-                                                    <div class="alert alert-danger hidden" id="contactError">
-                                                        Error sending your message.
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-
+                        <div class="tp-caption bottom-label"
+                             data-x="185"
+                             data-y="280"
+                             data-start="2000"
+                             data-transform_in="y:[100%];opacity:0;s:500;">Talk to us today. We don't resell your
+                            stuff locally.
                         </div>
-                    </div>
 
-                </div>
+                    </li>
+                </ul>
             </div>
-
         </div>
 
-        <div class="container">
+        <div class="home-intro" id="home-intro">
+            <div class="container">
 
-            <div class="row">
-                <div class="col-md-7">
-                    <h2>Your one stop dealer to sell <strong>used IT equipment!</strong></h2>
-                    <p class="lead"> We believe in bringing value to our partners. We are direct refurbishers with
-                        offices across Asia.</p>
-
-                    <p>We buy all brands used laptops and other IT equipment. We dont resell your equipment locally. All
-                        equipment goes to our offices in Asia where its refurbished and reaches directly end users. </p>
-
-                    <div class="row mt-xlg mb-xl">
-                        <div class="col-md-6">
-                            <div class="feature-box feature-box-style-2">
-                                <div class="feature-box-icon">
-                                    <i class="fa fa-star"></i>
-                                </div>
-                                <div class="feature-box-info">
-                                    <h4 class="heading-primary mb-xs"> Asia operations since 2005</h4>
-                                    <p> Selling to us means that you dont have a business just making money by
-                                        aggregating stuff and reselling to multiple companies. We ship all our equopment
-                                        to our offices in Singapore.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="feature-box feature-box-style-2">
-                                <div class="feature-box-icon">
-                                    <i class="fa fa-heart"></i>
-                                </div>
-                                <div class="feature-box-info">
-                                    <h4 class="heading-primary mb-xs">Loved by customers and partners</h4>
-                                    <p>We believe that business are build on trust and customer relations. We will never
-                                        try to make false promise and under deliver. </p>
-                                </div>
-                            </div>
+                <div class="row">
+                    <div class="col-md-8">
+                        <p>
+                            The fastest way to grow your business with market leading operations across Asia
+                            <span>Talk to us today.</span>
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="get-started">
+                            <a href="#" class="btn btn-lg btn-primary">Get Started Now!</a>
+                            <div class="learn-more">or <a href="/">learn more.</a></div>
                         </div>
                     </div>
-
-                    <hr class="tall">
-
-                    <h4>Work <strong>Space</strong></h4>
-
-                    <div data-plugin-lightbox
-                         data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}}">
-                        <div class="row">
-                            <div class="col-md-4">
-                                <a class="img-thumbnail mb-xl" href="img/office/our-office-1.jpg"
-                                   data-plugin-options="{'type':'image'}">
-                                    <img class="img-responsive" src="img/office/our-office-1.jpg" alt="Office">
-                                    <span class="zoom">
-												<i class="fa fa-search"></i>
-											</span>
-                                </a>
-                            </div>
-                            <div class="col-md-4">
-                                <a class="img-thumbnail mb-xl" href="img/office/our-office-2.jpg"
-                                   data-plugin-options="{'type':'image'}">
-                                    <img class="img-responsive" src="img/office/our-office-2.jpg" alt="Office">
-                                    <span class="zoom">
-												<i class="fa fa-search"></i>
-											</span>
-                                </a>
-                            </div>
-                            <div class="col-md-4">
-                                <a class="img-thumbnail mb-xl" href="img/office/our-office-3.jpg"
-                                   data-plugin-options="{'type':'image'}">
-                                    <img class="img-responsive" src="img/office/our-office-3.jpg" alt="Office">
-                                    <span class="zoom">
-												<i class="fa fa-search"></i>
-											</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
-                <div class="col-md-5">
-                    <h4>Our <strong>Location</strong></h4>
 
-                    <!-- Google Maps - Go to the bottom of the page to change settings and map location. -->
-                    <div id="googlemaps" class="google-map small"></div>
-
-                    <ul class="list list-icons list-icons-style-3 mt-xlg">
-                        <li><i class="fa fa-map-marker"></i> <strong>Address:</strong> 34754 Siward Dr, Fremont,
-                            California 94555, United States
-                        </li>
-                        <li><i class="fa fa-phone"></i> <strong>Phone:</strong> (650) 787-3966</li>
-                        <li><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">info@itcleanup.com</a>
-                        </li>
-                    </ul>
-
-                    <hr>
-
-                    <h4>Business <strong>Hours</strong></h4>
-                    <ul class="list list-icons list-dark mt-xlg">
-                        <li><i class="fa fa-clock-o"></i> Monday - Friday - 9am to 5pm</li>
-                        <li><i class="fa fa-clock-o"></i> Saturday - 9am to 2pm</li>
-                        <li><i class="fa fa-clock-o"></i> Sunday - Closed</li>
-                    </ul>
-                </div>
             </div>
+        </div>
 
+        <div class="slider-contact-form">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-5 col-md-offset-7">
+
+                        <div class="featured-boxes mt-none mb-none">
+                            <div class="featured-box featured-box-primary mt-xl">
+                                <div class="box-content">
+                                    <h4 class="mb-none">Contact Us</h4>
+                                    <p>Contact us or give us a call to discover how we can help.</p>
+                                    <form id="contactForm" action="php/contact-form.php" method="POST">
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div class="col-md-6">
+                                                    <label>Your name *</label>
+                                                    <input type="text" value=""
+                                                           data-msg-required="Please enter your name."
+                                                           maxlength="100" class="form-control" name="name"
+                                                           id="name" required>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label>Your email address *</label>
+                                                    <input type="email" value=""
+                                                           data-msg-required="Please enter your email address."
+                                                           data-msg-email="Please enter a valid email address."
+                                                           maxlength="100" class="form-control" name="email"
+                                                           id="email" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div class="col-md-12">
+                                                    <label>Subject</label>
+                                                    <input type="text" value=""
+                                                           data-msg-required="Please enter the subject."
+                                                           maxlength="100" class="form-control" name="subject"
+                                                           id="subject" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="form-group">
+                                                <div class="col-md-12">
+                                                    <label>Message *</label>
+                                                    <textarea maxlength="5000"
+                                                              data-msg-required="Please enter your message."
+                                                              rows="3" class="form-control" name="message"
+                                                              id="message" required></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <input type="submit" value="Send Message"
+                                                       class="btn btn-primary mb-xl" data-loading-text="Loading...">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="alert alert-success hidden" id="contactSuccess">
+                                                    Message has been sent to us.
+                                                </div>
+
+                                                <div class="alert alert-danger hidden" id="contactError">
+                                                    Error sending your message.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
 
     </div>
 
-    {% include "templates/footer.html" %}
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-7">
+                <h2>Your one stop dealer to sell <strong>used IT equipment!</strong></h2>
+                <p class="lead"> We believe in bringing value to our partners. We are direct refurbishers with
+                    offices across Asia.</p>
+
+                <p>We buy all brands used laptops and other IT equipment. We dont resell your equipment locally. All
+                    equipment goes to our offices in Asia where its refurbished and reaches directly end users. </p>
+
+                <div class="row mt-xlg mb-xl">
+                    <div class="col-md-6">
+                        <div class="feature-box feature-box-style-2">
+                            <div class="feature-box-icon">
+                                <i class="fa fa-star"></i>
+                            </div>
+                            <div class="feature-box-info">
+                                <h4 class="heading-primary mb-xs"> Asia operations since 2005</h4>
+                                <p> Selling to us means that you dont have a business just making money by
+                                    aggregating stuff and reselling to multiple companies. We ship all our equopment
+                                    to our offices in Singapore.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="feature-box feature-box-style-2">
+                            <div class="feature-box-icon">
+                                <i class="fa fa-heart"></i>
+                            </div>
+                            <div class="feature-box-info">
+                                <h4 class="heading-primary mb-xs">Loved by customers and partners</h4>
+                                <p>We believe that business are build on trust and customer relations. We will never
+                                    try to make false promise and under deliver. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="tall">
+
+                <h4>Work <strong>Space</strong></h4>
+
+                <div data-plugin-lightbox
+                     data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}}">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a class="img-thumbnail mb-xl" href="img/office/our-office-1.jpg"
+                               data-plugin-options="{'type':'image'}">
+                                <img class="img-responsive" src="img/office/our-office-1.jpg" alt="Office">
+                                <span class="zoom">
+                                            <i class="fa fa-search"></i>
+                                        </span>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class="img-thumbnail mb-xl" href="img/office/our-office-2.jpg"
+                               data-plugin-options="{'type':'image'}">
+                                <img class="img-responsive" src="img/office/our-office-2.jpg" alt="Office">
+                                <span class="zoom">
+                                            <i class="fa fa-search"></i>
+                                        </span>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a class="img-thumbnail mb-xl" href="img/office/our-office-3.jpg"
+                               data-plugin-options="{'type':'image'}">
+                                <img class="img-responsive" src="img/office/our-office-3.jpg" alt="Office">
+                                <span class="zoom">
+                                            <i class="fa fa-search"></i>
+                                        </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-5">
+                <h4>Our <strong>Location</strong></h4>
+
+                <!-- Google Maps - Go to the bottom of the page to change settings and map location. -->
+                <div id="googlemaps" class="google-map small"></div>
+
+                <ul class="list list-icons list-icons-style-3 mt-xlg">
+                    <li><i class="fa fa-map-marker"></i> <strong>Address:</strong> 34754 Siward Dr, Fremont,
+                        California 94555, United States
+                    </li>
+                    <li><i class="fa fa-phone"></i> <strong>Phone:</strong> (650) 787-3966</li>
+                    <li><i class="fa fa-envelope"></i> <strong>Email:</strong> <a href="mailto:mail@example.com">info@itcleanup.com</a>
+                    </li>
+                </ul>
+
+                <hr>
+
+                <h4>Business <strong>Hours</strong></h4>
+                <ul class="list list-icons list-dark mt-xlg">
+                    <li><i class="fa fa-clock-o"></i> Monday - Friday - 9am to 5pm</li>
+                    <li><i class="fa fa-clock-o"></i> Saturday - 9am to 2pm</li>
+                    <li><i class="fa fa-clock-o"></i> Sunday - Closed</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
 </div>
+{% endblock %}
 
-{% include "templates/footer_incs.html" %}
 
+{% block current_page_script %}
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM0VFhswsa5iSiztF7MARARq7_ATjB254"></script>
 <script>
@@ -396,6 +385,4 @@
 
 </script>
 
-
-</body>
-</html>
+{% endblock %}
