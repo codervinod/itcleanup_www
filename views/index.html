@@ -274,7 +274,7 @@
 
 {% block current_page_script %}
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM0VFhswsa5iSiztF7MARARq7_ATjB254"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{consts.google_map_api_key}}"></script>
 <script>
 
     /*
@@ -288,8 +288,8 @@
 
     // Map Markers
     var mapMarkers = [{
-        address: "Fremont, CA 94555",
-        html: "<strong>San Francisco Bay Area Office</strong><br>Fremont, CA 94555",
+        address: {{ consts.address_str }},
+        html: {{ consts.address_html }},
         icon: {
             image: "img/pin.png",
             iconsize: [26, 46],
@@ -299,8 +299,8 @@
     }];
 
     // Map Initial Location
-    var initLatitude = 48.87146;
-    var initLongitude = 2.35500;
+    var initLatitude = {{ consts.latitude }} ;
+    var initLongitude = {{ consts.longitude }} ;
 
     // Map Extended Settings
     var mapSettings = {
