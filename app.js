@@ -20,27 +20,27 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', function(req, res) {
-    res.render('index.html');
+    res.render('index.njk');
 });
 
 app.get('/about-us', function(req, res) {
-    res.render('about-us.html');
+    res.render('about-us.njk');
 });
 
 app.get('/contact-us', function(req, res) {
-    res.render('contact-us.html');
+    res.render('contact-us.njk');
 });
 
 app.get('/page-404', function(req, res) {
-    res.render('page-404.html');
+    res.render('page-404.njk');
 });
 
 app.get('/page-faq', function(req, res) {
-    res.render('page-faq.html');
+    res.render('page-faq.njk');
 });
 
 app.get('/sitemap', function(req, res) {
-    res.render('sitemap.html');
+    res.render('sitemap.njk');
 });
 
 module.exports = app;

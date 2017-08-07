@@ -4,20 +4,20 @@
 <head>
     {% import "templates/consts.njk" as consts %}
 
-    {% include "templates/header.html" %}
+    {% include "templates/header.njk" %}
 
 </head>
 <body>
 
 <div class="body">
-    {% include "templates/menu.html" %}
+    {% include "templates/menu.njk" %}
     {% block main_body %}
             Default body
     {% endblock %}
-    {% include "templates/footer.html" %}
+    {% include "templates/footer.njk" %}
 </div>
 
-{% include "templates/footer_incs.html" %}
+{% include "templates/footer_incs.njk" %}
 {% block current_page_script %}
 
 {% endblock %}
