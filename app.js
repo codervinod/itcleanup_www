@@ -6,6 +6,10 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var nunjucks = require('nunjucks');
 
+var contact = require('./routes/contact');
+var newsletter = require('./routes/newsletter');
+var twitter = require('./routes/twitter');
+
 var app = express();
 
 nunjucks.configure('views', {
@@ -18,6 +22,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/contact', contact);
+app.use('/newsletter', newsletter);
+app.use('/twitter', twitter);
 
 app.get('/', function(req, res) {
     res.render('index.njk');

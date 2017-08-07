@@ -2135,7 +2135,7 @@ window.theme.fn = {
 	PluginTweets.defaults = {
 		username: null,
 		count: 2,
-		URL: 'php/twitter-feed.php'
+		URL: '/twitter/feed'
 	};
 
 	PluginTweets.prototype = {
@@ -2245,8 +2245,8 @@ window.theme.fn = {
 						}
 					}
 				},
-				validateCaptchaURL: 'php/contact-form-verify-captcha.php',
-				refreshCaptchaURL: 'php/contact-form-refresh-captcha.php'
+				validateCaptchaURL: 'contact/verify-captcha',
+				refreshCaptchaURL: 'contact/refresh-captcha'
 			},
 
 			initialize: function(opts) {
