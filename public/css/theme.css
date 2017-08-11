@@ -2309,13 +2309,13 @@ aside ul.nav-list > li > a {
 }
 
 .slider-container .top-label {
-	color: #FF4500;
+	color: #171717;
 	font-size: 24px;
 	font-weight: 600;
 }
 
 .slider-container .main-label {
-	color: #FF4500;
+	color: #171717;
 	font-size: 62px;
 	line-height: 62px;
 	font-weight: 800;
@@ -2323,7 +2323,7 @@ aside ul.nav-list > li > a {
 }
 
 .slider-container .featured-label {
-	color: #FF4500;
+	color: #171717;
 	font-size: 52px;
 	line-height: 52px;
 	font-weight: 800;
@@ -2331,7 +2331,7 @@ aside ul.nav-list > li > a {
 }
 
 .slider-container .bottom-label {
-	color: #FF4500;
+	color: #171717;
 	font-size: 20px;
 	line-height: 20px;
 	font-weight: 600;

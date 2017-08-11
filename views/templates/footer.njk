@@ -38,11 +38,14 @@
                 <div class="contact-details">
                     <h4>Contact Us</h4>
                     <ul class="contact">
-                        <li><p><i class="fa fa-map-marker"></i> <strong>Address:</strong> 34754 Siward Dr, Fremont,
-                            California 94555, United States</p></li>
-                        <li><p><i class="fa fa-phone"></i> <strong>Phone:</strong> (650) 787-3966</p></li>
+                        <li><p><i class="fa fa-map-marker"></i>
+                        {{ consts.address_html | safe }}
+                        </p></li>
+                        <li><p><i class="fa fa-phone"></i>
+                            <strong>Phone:</strong> {{ consts.contact_number }}</p></li>
                         <li><p><i class="fa fa-envelope"></i> <strong>Email:</strong> <a
-                                href="mailto:mail@example.com">info@itcleanup.com</a></p></li>
+                                href="{{  consts.email_address_href }}">
+                            {{  consts.email_address_href }} </a></p></li>
                     </ul>
                 </div>
             </div>
