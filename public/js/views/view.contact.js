@@ -30,7 +30,8 @@ Theme Version:	5.7.2
 					name: $form.find('#name').val(),
 					email: $form.find('#email').val(),
 					subject: $form.find('#subject').val(),
-					message: $form.find('#message').val()
+					message: $form.find('#message').val(),
+					g_recaptcha_response: $form.find('#g-recaptcha-response').val()
 				}
 			}).always(function(data, textStatus, jqXHR) {
 
