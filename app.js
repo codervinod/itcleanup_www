@@ -51,4 +51,9 @@ app.get('/sitemap', function(req, res) {
     res.render('sitemap.njk');
 });
 
+
+app.get('/image-gallery', function(req, res) {
+    res.render('image-gallery.njk');
+});
+
 module.exports = app;
